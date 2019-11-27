@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic router</title>
+  <script language="javascript" src="/myapp/route.js"></script>
+  <script language="javascript" src="/myapp/router.js"></script>
+  <style type="text/css">
+/* to be careful with sub elements of clickable route */
+[route] > * {
+  pointer-events: none;
+}
+  </style>
+</head>
+<body>
+  <button route="/form">
+    Form
+  </button>
+  <button route="/show/512/nelson">
+    Show signed record
+  </button>
+  <button route="/show/512">
+    Show record
+  </button>
+  <button route="/login">
+    <span>
+    Log in
+    </span>
+  </button>
+  <!-- Need to change my Apache Directive to use relative paths (TODO) -->
+  <script language="javascript" src="/myapp/app.js"></script>
+</body>
+</html>
