@@ -3,9 +3,14 @@
 const router = new Router();
 
 router.root = '/myapp';
+/*
+ *   Can't use a path like "/" (root) because triggers all rules.
+ *   Need to review the regexp generation. (TODO)
+
 router.add({
   name: 'root', path: '/', handler: () => console.log('root')
 });
+*/
 router.add({
   name: 'form', path: '/form', handler: () => console.log('form')
 });

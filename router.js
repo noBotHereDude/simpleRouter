@@ -44,7 +44,7 @@ class Router {
       let regexPath = this.routes[i].path.replace(/([:*])(\w+)/g, (full, colon, name) => {
         paramNames.push(name);
         return '([^\/]+)';
-      }) + '(?:$)'; // enable routes '/show', '/show/:id' and '/show/:id/:user' to match only once
+      }) + '(?:$\/$)'; // enable routes '/show', '/show/:id' and '/show/:id/:user' to match only once
 
       let routeMatch = route.match(new RegExp(regexPath));
       if(routeMatch !== null) {
